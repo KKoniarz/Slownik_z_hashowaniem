@@ -25,9 +25,9 @@ class MyTestCase(unittest.TestCase):
 
         # adding and overriding by Pair object
         test_dict = HashListDict()
-        test_dict.update(Pair("k1", "v1"))
+        test_dict.update(("k1", "v1"))
         self.assertEqual(result1, str(test_dict))
-        test_dict.update(Pair("k1", "v2"))
+        test_dict.update(("k1", "v2"))
         self.assertEqual(result2, str(test_dict))
 
         # adding and overriding by [] operator
@@ -44,7 +44,7 @@ class MyTestCase(unittest.TestCase):
         test_dict["k3"] = "v3"
         self.assertEqual(3, test_dict.num_of_el)
         self.assertTrue("k1" in test_dict)
-        self.assertEqual("'k1': 'v1'", str(test_dict.pop("k1")))
+        self.assertEqual("('k1', 'v1')", str(test_dict.pop("k1")))
         self.assertFalse("k1" in test_dict)
         self.assertEqual(2, test_dict.num_of_el)
         self.assertTrue("k2" in test_dict)
