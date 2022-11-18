@@ -1,8 +1,5 @@
 from sys import exc_info as trace_back
-from Pair import Pair
 from math import ceil
-# from collections.abc import Mapping
-# from typing import TypeVar
 
 
 class HashListDict:
